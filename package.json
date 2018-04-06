@@ -14,10 +14,9 @@
   },
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-inject": "^4.3.2",
     "gulp-jscs": "^4.1.0",
     "gulp-jshint": "^2.1.0",
-    "jscs": "^3.0.7",
-    "jshint": "^2.9.5",
     "jshint-stylish": "^2.2.1",
     "wiredep": "^4.0.0"
   }
