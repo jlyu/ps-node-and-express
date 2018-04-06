@@ -1,0 +1,21 @@
+{
+  "name": "library",
+  "description": "create web application with nodejs and express",
+  "main": "app.js",
+  "authors": [
+    "Chain Yu"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "font-awesome": "^5.0.9"
+  }
+}
