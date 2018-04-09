@@ -7,10 +7,10 @@ app.use(express.static('public'));
 //app.use(express.static('src/views'));
 app.set('views', './src/views');
 
-var handlebars = require('express-handlebars');
-app.engine('.hbs', handlebars({extname: '.hbs'}));
+//var handlebars = require('express-handlebars');
+//app.engine('.hbs', handlebars({extname: '.hbs'}));
 
-app.set('view engine', '.hbs'); //'jade'
+app.set('view engine', 'ejs'); //'jade','.hbs'
 
 app.get('/', function(req, res) {
     res.render('index', {title: 'hello handlebars', list: ['a', 'b']});  //send('Hello World!');
