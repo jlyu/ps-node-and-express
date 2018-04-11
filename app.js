@@ -13,7 +13,11 @@ app.set('views', './src/views');
 app.set('view engine', 'ejs'); //'jade','.hbs'
 
 app.get('/', function(req, res) {
-    res.render('index', {title: 'hello handlebars', list: ['a', 'b']});  //send('Hello World!');
+    res.render('index', {
+        title: 'hello handlebars',
+        list: ['a', 'b'],
+        nav: [ {Link:'/Books', Text:'Books'}, { Link:'/Authors', Text:'Authors'} ]
+    });  //send('Hello World!');
 });
 
 app.get('/books', function(req, res) {
