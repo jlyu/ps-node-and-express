@@ -13,10 +13,32 @@ app.set('views', './src/views');
 
 app.set('view engine', 'ejs'); //'jade','.hbs'
 
+
+var books = [
+    {
+        title: '1111',
+        author: 'chain'
+    },
+    {
+        title: '2222',
+        author: 'chain'
+    },
+    {
+        title: '3333',
+        author: 'chain'
+    }
+];
 bookRouter.route('/')
     .get(function(req, res){
-        res.send('Hello Books');
+        res.render('books', {
+            title: 'hello books',
+            list: ['a', 'b'],
+            nav: [ {Link:'/Books', Text:'Books'}, { Link:'/Authors', Text:'Authors'} ],
+            books: books
+        });
 });
+
+
 
 bookRouter.route('/single')
     .get(function(req, res){
