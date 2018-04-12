@@ -16,7 +16,7 @@ app.set('view engine', 'ejs'); //'jade','.hbs'
 
 
 
-app.use('/Books', bookRouter);
+app.use('/books', bookRouter);
 
 
 
