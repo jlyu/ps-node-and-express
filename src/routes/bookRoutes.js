@@ -64,9 +64,15 @@ bookRouter.route('/')
 
 
 
-bookRouter.route('/single')
+bookRouter.route('/:id')
     .get(function(req, res){
-        res.send('Hello Book');
+        var id = req.params.id;
+        res.render('book', {
+            title: 'hello books',
+            list: ['a', 'b'],
+            nav: [ {Link:'/Books', Text:'Books'}, { Link:'/Authors', Text:'Authors'} ],
+            book: books[id]
+        });
 });
 
 
