@@ -17,16 +17,16 @@ app.use('/Admin', adminRouter);
 app.get('/', function(req, res) {
     res.render('index', {
         title: 'hello handlebars',
-        list: ['a', 'b'],
         nav: [ {Link:'/Books', Text:'Books'}, { Link:'/Authors', Text:'Authors'} ]
-    });  //send('Hello World!');
+    });
+    //res.send('Hello World!');
 });
 
 app.get('/books', function(req, res) {
     res.send('Hello Books');
 });
 
-app.listen(5000, function(err) {
+app.listen(port, function(err) {
     console.log('running server on port: ' + port);
 });
 
